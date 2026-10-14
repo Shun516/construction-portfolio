@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>お問い合わせ | 未来創造建設株式会社</title>
+  <meta name="description" content="架空の総合建設会社「未来創造建設株式会社」のお問い合わせフォーム（デモ）。入力内容はどこにも送信されません。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo" aria-label="未来創造建設株式会社 トップへ">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <span class="logo__ja">未来創造建設</span>
+          <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+        </span>
+      </a>
+
+      <button class="header__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="globalNav" aria-label="メインメニュー">
+        <div class="nav__head">
+          <span class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            <span class="logo__text">
+              <span class="logo__ja">未来創造建設</span>
+              <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+            </span>
+          </span>
+          <button type="button" class="nav__close" id="navClose" aria-label="メニューを閉じる">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#message" class="nav__link"><span class="nav__en" aria-hidden="true">Message</span><span class="nav__label">私たちについて</span></a></li>
+          <li class="nav__item"><a href="index.html#business" class="nav__link"><span class="nav__en" aria-hidden="true">Business</span><span class="nav__label">事業領域</span></a></li>
+          <li class="nav__item"><a href="works.html" class="nav__link"><span class="nav__en" aria-hidden="true">Works</span><span class="nav__label">施工実績</span></a></li>
+          <li class="nav__item"><a href="index.html#technology" class="nav__link"><span class="nav__en" aria-hidden="true">Technology</span><span class="nav__label">技術</span></a></li>
+          <li class="nav__item"><a href="company.html" class="nav__link"><span class="nav__en" aria-hidden="true">Company</span><span class="nav__label">会社概要</span></a></li>
+          <li class="nav__item"><a href="recruit.html" class="nav__link"><span class="nav__en" aria-hidden="true">Recruit</span><span class="nav__label">採用情報</span></a></li>
+        </ul>
+
+        <div class="nav__cta">
+          <a href="contact.html" class="btn btn--primary btn--block" aria-current="page">お問い合わせ</a>
+          <p class="nav__info">受付時間　平日 9:00〜17:30</p>
+          <p class="demo-note">※デモ用の架空の企業情報です</p>
+        </div>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary header__contact" aria-current="page">お問い合わせ</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ページ見出し -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <ol>
+            <li><a href="index.html">ホーム</a></li>
+            <li aria-current="page">お問い合わせ</li>
+          </ol>
+        </nav>
+        <h1 class="section-title page-hero__title">
+          <span class="section-title__en">Contact</span>
+          <span class="section-title__ja">お問い合わせ</span>
+        </h1>
+        <p class="page-hero__lead">建設のご相談・お見積りのご依頼・採用についてなど、下記のフォームからお問い合わせください。担当者より3営業日以内にご連絡します。</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container container--form">
+
+        <!-- デモの注意書き -->
+        <div class="notice" role="note">
+          <p class="notice__title">このフォームはデモです</p>
+          <p>架空の企業のポートフォリオ作品のため、入力した内容は<strong>どこにも送信・保存されません</strong>。入力チェックと確認画面の動きだけをお試しいただけます。</p>
+        </div>
+
+        <!-- 入力エラーのまとめ（エラー時のみ表示） -->
+        <div class="error-summary" id="errorSummary" tabindex="-1" role="alert" hidden>
+          <p class="error-summary__title">入力内容に誤りがあります</p>
+          <ul></ul>
+        </div>
+
+        <!-- 送信先を持たないフォーム（ボタンは type="button" で、JavaScript でのみ処理） -->
+        <form class="form" id="contactForm" novalidate onsubmit="return false;">
+          <fieldset class="form__section">
+            <legend class="form__legend"><span>01</span>お問い合わせ内容</legend>
+
+            <fieldset class="field" data-field="type">
+              <legend class="field__label">お問い合わせの種類<span class="req">必須</span></legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="type" value="consult" aria-describedby="error-type">建設のご相談</label>
+                <label class="choice"><input type="radio" name="type" value="estimate" aria-describedby="error-type">お見積りのご依頼</label>
+                <label class="choice"><input type="radio" name="type" value="recruit" aria-describedby="error-type">採用について</label>
+                <label class="choice"><input type="radio" name="type" value="other" aria-describedby="error-type">その他</label>
+              </div>
+              <p class="field__error" id="error-type" aria-live="polite"></p>
+            </fieldset>
+
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="field-use">建物の用途<span class="opt">任意</span></label>
+                <select class="field__control" id="field-use" name="use">
+                  <option value="">選択してください</option>
+                  <option>オフィス・商業施設</option>
+                  <option>文化・公共施設</option>
+                  <option>教育・医療施設</option>
+                  <option>集合住宅</option>
+                  <option>工場・物流施設</option>
+                  <option>その他・未定</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="field__label" for="field-timing">ご検討の時期<span class="opt">任意</span></label>
+                <select class="field__control" id="field-timing" name="timing">
+                  <option value="">選択してください</option>
+                  <option>半年以内</option>
+                  <option>1年以内</option>
+                  <option>2〜3年以内</option>
+                  <option>未定・情報収集中</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field" data-field="message">
+              <label class="field__label" for="field-message">お問い合わせ内容<span class="req">必須</span></label>
+              <textarea class="field__control" id="field-message" name="message" rows="7" maxlength="1000" placeholder="計画地・規模・ご予算など、わかる範囲でご記入ください。" aria-describedby="error-message messageCount"></textarea>
+              <p class="field__count" id="messageCount">0 / 1000</p>
+              <p class="field__error" id="error-message" aria-live="polite"></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__section">
+            <legend class="form__legend"><span>02</span>お客様情報</legend>
+
+            <div class="field">
+              <label class="field__label" for="field-company">会社名・団体名<span class="opt">任意</span></label>
+              <input class="field__control" type="text" id="field-company" name="company" autocomplete="organization" placeholder="例）〇〇株式会社">
+            </div>
+
+            <div class="field-row">
+              <div class="field" data-field="name">
+                <label class="field__label" for="field-name">お名前<span class="req">必須</span></label>
+                <input class="field__control" type="text" id="field-name" name="name" autocomplete="name" placeholder="例）未来 太郎" aria-describedby="error-name" required>
+                <p class="field__error" id="error-name" aria-live="polite"></p>
+              </div>
+              <div class="field" data-field="kana">
+                <label class="field__label" for="field-kana">フリガナ<span class="req">必須</span></label>
+                <input class="field__control" type="text" id="field-kana" name="kana" placeholder="例）ミライ タロウ" aria-describedby="error-kana" required>
+                <p class="field__error" id="error-kana" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field" data-field="email">
+                <label class="field__label" for="field-email">メールアドレス<span class="req">必須</span></label>
+                <input class="field__control" type="email" id="field-email" name="email" autocomplete="email" placeholder="例）taro@example.com" aria-describedby="error-email" required>
+                <p class="field__error" id="error-email" aria-live="polite"></p>
+              </div>
+              <div class="field" data-field="tel">
+                <label class="field__label" for="field-tel">電話番号<span class="req">必須</span></label>
+                <input class="field__control" type="tel" id="field-tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="例）03-0000-0000" aria-describedby="error-tel" required>
+                <p class="field__error" id="error-tel" aria-live="polite"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="field field--agree" data-field="agree">
+            <label class="agree">
+              <input type="checkbox" id="field-agree" name="agree" aria-describedby="error-agree" required>
+              <span>個人情報の取り扱いに同意し、<strong>このフォームはデモのため送信されないこと</strong>を確認しました。</span>
+            </label>
+            <p class="field__error" id="error-agree" aria-live="polite"></p>
+          </div>
+
+          <div class="form__actions">
+            <button type="button" class="btn btn--primary form__submit" id="toConfirm">入力内容を確認する</button>
+          </div>
+        </form>
+
+        <!-- 確認画面 -->
+        <div class="confirm" id="formConfirm" tabindex="-1" hidden>
+          <h2 class="confirm__title">入力内容の確認</h2>
+          <p class="confirm__lead">以下の内容でよろしければ「送信する」を押してください。</p>
+          <dl class="confirm__list" id="confirmList"></dl>
+          <div class="form__actions form__actions--split">
+            <button type="button" class="btn btn--outline" id="backToForm">修正する</button>
+            <button type="button" class="btn btn--primary" id="finish">送信する（デモ）</button>
+          </div>
+        </div>
+
+        <!-- 完了画面 -->
+        <div class="done" id="formDone" tabindex="-1" hidden>
+          <p class="done__en">Thank you</p>
+          <h2 class="done__title">お問い合わせありがとうございます（デモ）</h2>
+          <p>実際のサイトでは、ここで内容が送信され、確認メールが届く流れになります。<br>このページはデモのため、入力内容は送信・保存されていません。</p>
+          <a href="index.html" class="btn btn--outline">トップページへ戻る</a>
+        </div>
+
+        <p class="tel-guide"><span class="phrase">お電話でのお問い合わせ：</span><span class="phrase"><a href="tel:0300000000">03-0000-0000</a>（平日 9:00〜17:30）</span><br><span class="demo-note">※デモ用の架空の電話番号です</span></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__company">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__text">
+            <span class="logo__ja">未来創造建設株式会社</span>
+            <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+          </span>
+        </a>
+        <p class="footer__info">〒100-0000<br><span class="phrase">東京都千代田区みらい町1-2-3</span> <span class="phrase">未来創造ビル</span><br>TEL 03-0000-0000（平日 9:00〜17:30）</p>
+      </div>
+
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer__nav">
+          <li><a href="index.html#message">私たちについて</a></li>
+          <li><a href="index.html#business">事業領域</a></li>
+          <li><a href="works.html">施工実績</a></li>
+          <li><a href="index.html#technology">技術</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="index.html#news">お知らせ</a></li>
+          <li><a href="contact.html" aria-current="page">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p class="demo-note">※掲載の企業情報・施工実績・人物・数値は、すべてデモ用の架空のものです。実在の企業・建物とは関係ありません。</p>
+      <p class="footer__copy"><small>&copy; 2026 MIRAI SOZO CONSTRUCTION（架空）. ※このサイトは自主制作のデモサイトです。</small></p>
+    </div>
+  </footer>
+
+  <a href="#top" class="page-top" id="pageTop" aria-label="ページの先頭へ戻る"><span aria-hidden="true"></span></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

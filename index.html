@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>未来創造建設株式会社 | MIRAI SOZO CONSTRUCTION</title>
+  <meta name="description" content="架空の総合建設会社「未来創造建設株式会社」のデモサイト（Webデザインのポートフォリオ作品）。会社情報・施工実績・数値などはすべて架空のものです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#top" class="logo" aria-label="未来創造建設株式会社 トップへ">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <span class="logo__ja">未来創造建設</span>
+          <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+        </span>
+      </a>
+
+      <button class="header__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- スマホ・タブレット：全画面メニュー ／ PC：ヘッダー内の横並びナビ -->
+      <nav class="nav" id="globalNav" aria-label="メインメニュー">
+        <div class="nav__head">
+          <span class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            <span class="logo__text">
+              <span class="logo__ja">未来創造建設</span>
+              <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+            </span>
+          </span>
+          <button type="button" class="nav__close" id="navClose" aria-label="メニューを閉じる">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#message" class="nav__link"><span class="nav__en" aria-hidden="true">Message</span><span class="nav__label">私たちについて</span></a></li>
+          <li class="nav__item"><a href="#business" class="nav__link"><span class="nav__en" aria-hidden="true">Business</span><span class="nav__label">事業領域</span></a></li>
+          <li class="nav__item"><a href="#works" class="nav__link"><span class="nav__en" aria-hidden="true">Works</span><span class="nav__label">施工実績</span></a></li>
+          <li class="nav__item"><a href="#technology" class="nav__link"><span class="nav__en" aria-hidden="true">Technology</span><span class="nav__label">技術</span></a></li>
+          <li class="nav__item"><a href="company.html" class="nav__link"><span class="nav__en" aria-hidden="true">Company</span><span class="nav__label">会社概要</span></a></li>
+          <li class="nav__item"><a href="recruit.html" class="nav__link"><span class="nav__en" aria-hidden="true">Recruit</span><span class="nav__label">採用情報</span></a></li>
+        </ul>
+
+        <div class="nav__cta">
+          <a href="contact.html" class="btn btn--primary btn--block">お問い合わせ</a>
+          <p class="nav__info">受付時間　平日 9:00〜17:30</p>
+          <p class="demo-note">※デモ用の架空の企業情報です</p>
+        </div>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary header__contact">お問い合わせ</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- メインビジュアル -->
+    <section class="hero">
+      <!--
+        ▼ 写真の差し替え方法（このサイトの画像はすべて同じ手順です）
+          1. 写真を images/ フォルダに入れる
+          2. img の src をそのファイル名に書き換える（例：images/hero.jpg）
+          3. alt（写真の説明文）も写真の内容に合わせて書き換える
+          写真は枠に合わせて自動で切り抜かれます。
+      -->
+      <div class="hero__media">
+        <img src="images/hero.svg" alt="夕暮れの空に並ぶ超高層ビル群と、手前の低層の美術館" width="1600" height="1000" fetchpriority="high">
+      </div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow">General Contractor since 1962</p>
+        <h1 class="hero__title">
+          <span class="phrase">都市に、</span><br><span class="phrase">次の100年を</span><span class="phrase">建てる。</span>
+        </h1>
+        <p class="hero__lead">
+          <span class="phrase">超高層ビルから美術館まで。</span><span class="phrase">構想を、確かな構造へ。</span>
+        </p>
+        <div class="hero__actions">
+          <a href="#works" class="btn btn--primary">施工実績を見る</a>
+          <a href="contact.html" class="btn btn--ghost">お問い合わせ</a>
+        </div>
+      </div>
+      <a href="#numbers" class="hero__scroll" aria-label="次のセクションへ"><span aria-hidden="true">Scroll</span></a>
+    </section>
+
+    <!-- 数字で見る -->
+    <section class="numbers" id="numbers" aria-labelledby="numbersTitle">
+      <div class="container">
+        <h2 class="visually-hidden" id="numbersTitle">数字で見る未来創造建設</h2>
+        <dl class="numbers__list">
+          <div class="numbers__item">
+            <dt>創業</dt>
+            <dd><span class="numbers__value">1962</span><span class="numbers__unit">年</span></dd>
+          </div>
+          <div class="numbers__item">
+            <dt>竣工実績</dt>
+            <dd><span class="numbers__value">1,280</span><span class="numbers__unit">件</span></dd>
+          </div>
+          <div class="numbers__item">
+            <dt>超高層建築</dt>
+            <dd><span class="numbers__value">42</span><span class="numbers__unit">棟</span></dd>
+          </div>
+          <div class="numbers__item">
+            <dt>一級建築士</dt>
+            <dd><span class="numbers__value">186</span><span class="numbers__unit">名</span></dd>
+          </div>
+        </dl>
+        <p class="demo-note demo-note--center">※数値はすべてデモ用の架空のものです（2026年3月時点という想定）</p>
+      </div>
+    </section>
+
+    <!-- 私たちについて -->
+    <section class="section" id="message">
+      <div class="container message">
+        <div class="message__head">
+          <h2 class="section-title">
+            <span class="section-title__en"><span class="section-title__num">01</span>Message</span>
+            <span class="section-title__ja">想像を、<br>構造にする。</span>
+          </h2>
+        </div>
+        <div class="message__body">
+          <p class="message__lead">
+            建築は、完成した日からまちの一部になり、何十年にもわたって人の暮らしを支え続けます。
+          </p>
+          <p>
+            未来創造建設は1962年の創業以来、オフィスビル、美術館、大学、病院など、
+            多くの人が集まる建物をつくってきました。
+            設計者の思い描いた空間を、安全に、そして正確にかたちにすること。
+            それが総合建設会社としての私たちの役割です。
+          </p>
+          <p>
+            これからも最新の技術と現場で培った経験を重ね合わせ、
+            次の世代に誇れる都市の風景を建てていきます。
+          </p>
+          <p class="message__sign">
+            <span class="message__role">代表取締役社長</span>
+            <span class="message__name">高瀬 誠一</span>
+          </p>
+          <p class="demo-note">※代表者は架空の人物です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 事業領域 -->
+    <section class="section section--alt section--grid" id="business">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en"><span class="section-title__num">02</span>Business</span>
+          <span class="section-title__ja">事業領域</span>
+        </h2>
+
+        <ul class="business">
+          <li class="business__item">
+            <svg class="business__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M14 44V10l10-6v40M24 44V14h10v30M8 44h32M18 16h2M18 22h2M18 28h2M18 34h2M28 20h2M28 26h2M28 32h2"/>
+            </svg>
+            <p class="business__en">High-rise &amp; Office</p>
+            <h3 class="business__title">超高層・オフィス</h3>
+            <p class="business__text">地上50階を超える複合タワーから中規模のオフィスビルまで。制震・免震技術で、長く安心して使える建物をつくります。</p>
+          </li>
+          <li class="business__item">
+            <svg class="business__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M6 20h36L24 8 6 20zM10 20v18M18 20v18M30 20v18M38 20v18M6 42h36M8 38h32"/>
+            </svg>
+            <p class="business__en">Culture &amp; Public</p>
+            <h3 class="business__title">文化・公共施設</h3>
+            <p class="business__text">美術館、音楽ホール、庁舎など。光や音響まで計算された、繊細な空間づくりを得意としています。</p>
+          </li>
+          <li class="business__item">
+            <svg class="business__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M6 42V18h36v24M6 42h36M18 42V32h12v10M24 6v12M19 11h10M12 24h4M32 24h4"/>
+            </svg>
+            <p class="business__en">Education &amp; Medical</p>
+            <h3 class="business__title">教育・医療施設</h3>
+            <p class="business__text">大学キャンパスや病院など、利用しながらの改修工事にも対応。安全と静けさに配慮して施工します。</p>
+          </li>
+          <li class="business__item">
+            <svg class="business__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M4 42h40M8 42V24h10v18M18 42V14h12v28M30 42V20h10v22M36 4v16M30 8h14"/>
+            </svg>
+            <p class="business__en">Urban Development</p>
+            <h3 class="business__title">都市再開発</h3>
+            <p class="business__text">駅前の再開発や複合施設の計画に、企画段階から参加。まち全体の動線と景観を考えた提案を行います。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 施工実績 -->
+    <section class="section" id="works">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en"><span class="section-title__num">03</span>Works</span>
+          <span class="section-title__ja">施工実績</span>
+        </h2>
+
+        <ul class="works">
+          <li class="works__item works__item--feature">
+            <figure>
+              <div class="works__media"><img src="images/work-tower.svg" alt="ガラスのカーテンウォールに覆われた細長い超高層タワー" width="1200" height="800" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">超高層・オフィス</span><span>2025年竣工</span></p>
+                <h3 class="works__title">あおば中央タワー</h3>
+                <p class="works__spec">東京都 ／ 地上52階・地下4階 ／ 延床面積 約18万㎡</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item">
+            <figure>
+              <div class="works__media"><img src="images/work-museum.svg" alt="水盤に面した、白い大屋根の低層の美術館" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">文化・公共</span><span>2024年竣工</span></p>
+                <h3 class="works__title">湖畔の森美術館</h3>
+                <p class="works__spec">滋賀県 ／ 地上2階 ／ 延床面積 約9,800㎡</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item">
+            <figure>
+              <div class="works__media"><img src="images/work-hall.svg" alt="波打つ屋根をもつ音楽ホールの外観" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">文化・公共</span><span>2023年竣工</span></p>
+                <h3 class="works__title">みなと音楽ホール</h3>
+                <p class="works__spec">神奈川県 ／ 地上4階 ／ 客席数 1,500席</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item">
+            <figure>
+              <div class="works__media"><img src="images/work-library.svg" alt="縦の木製ルーバーが並ぶ大学図書館" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">教育・医療</span><span>2024年竣工</span></p>
+                <h3 class="works__title">さくら学院大学 中央図書館</h3>
+                <p class="works__spec">京都府 ／ 地上5階 ／ 延床面積 約1.2万㎡</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item">
+            <figure>
+              <div class="works__media"><img src="images/work-station.svg" alt="駅前広場とペデストリアンデッキでつながる複合ビル群" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">都市再開発</span><span>2022年竣工</span></p>
+                <h3 class="works__title">ひかり台駅前地区 再開発</h3>
+                <p class="works__spec">大阪府 ／ 3棟・地上31階ほか ／ 区域面積 約2.4ha</p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <p class="demo-note">※施工実績・建物名・所在地などはすべてデモ用の架空のものです。画像はイメージイラストです。</p>
+        <div class="section-more">
+          <a href="works.html" class="btn btn--outline">施工実績をすべて見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技術 -->
+    <section class="section section--dark" id="technology">
+      <div class="container">
+        <h2 class="section-title section-title--light">
+          <span class="section-title__en"><span class="section-title__num">04</span>Technology</span>
+          <span class="section-title__ja"><span class="phrase">見えない部分にこそ、</span><span class="phrase">技術を。</span></span>
+        </h2>
+
+        <ol class="tech">
+          <li class="tech__item">
+            <p class="tech__num">T-01</p>
+            <h3 class="tech__title">制震・免震構造</h3>
+            <p class="tech__text">独自のダンパーで揺れのエネルギーを吸収し、大地震のあとも建物を使い続けられる構造をつくります。</p>
+          </li>
+          <li class="tech__item">
+            <p class="tech__num">T-02</p>
+            <h3 class="tech__title">BIMによるデジタル施工</h3>
+            <p class="tech__text">設計から施工までを3次元モデルで共有。干渉や手戻りを事前に洗い出し、工期と品質を両立します。</p>
+          </li>
+          <li class="tech__item">
+            <p class="tech__num">T-03</p>
+            <h3 class="tech__title">環境配慮建築（ZEB）</h3>
+            <p class="tech__text">高断熱の外装、自然換気、太陽光発電を組み合わせ、エネルギー消費を大きく抑える建物を提案します。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- プロジェクトの流れ -->
+    <section class="section section--alt" id="flow">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-title__en"><span class="section-title__num">05</span>Process</span>
+          <span class="section-title__ja">プロジェクトの流れ</span>
+        </h2>
+
+        <ol class="flow">
+          <li class="flow__item">
+            <span class="flow__step">Step 01</span>
+            <h3 class="flow__title">ご相談・企画</h3>
+            <p class="flow__text">用途や規模、ご予算をうかがい、事業計画の段階からご一緒します。</p>
+          </li>
+          <li class="flow__item">
+            <span class="flow__step">Step 02</span>
+            <h3 class="flow__title">設計・技術検討</h3>
+            <p class="flow__text">設計者と協力し、構造・設備・コストの面から最適な方法を検討します。</p>
+          </li>
+          <li class="flow__item">
+            <span class="flow__step">Step 03</span>
+            <h3 class="flow__title">施工計画</h3>
+            <p class="flow__text">BIMで工程を組み立て、安全計画と近隣への配慮事項をまとめます。</p>
+          </li>
+          <li class="flow__item">
+            <span class="flow__step">Step 04</span>
+            <h3 class="flow__title">施工</h3>
+            <p class="flow__text">品質・安全・工程を毎日確認し、定例会議で進み具合をご報告します。</p>
+          </li>
+          <li class="flow__item">
+            <span class="flow__step">Step 05</span>
+            <h3 class="flow__title">竣工・お引き渡し</h3>
+            <p class="flow__text">各種検査を経てお引き渡し。設備の使い方もていねいにご説明します。</p>
+          </li>
+          <li class="flow__item">
+            <span class="flow__step">Step 06</span>
+            <h3 class="flow__title">アフターサポート</h3>
+            <p class="flow__text">定期点検と長期修繕計画のご提案で、建物の価値を守り続けます。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- お知らせ -->
+    <section class="section" id="news">
+      <div class="container news">
+        <h2 class="section-title">
+          <span class="section-title__en"><span class="section-title__num">06</span>News</span>
+          <span class="section-title__ja">お知らせ</span>
+        </h2>
+        <ul class="news__list">
+          <li class="news__item"><time datetime="2026-10-01">2026.10.01</time><span class="news__cat">Project</span><span class="news__title">「あおば中央タワー」が日本建築デザイン賞（架空）を受賞しました</span></li>
+          <li class="news__item"><time datetime="2026-09-12">2026.09.12</time><span class="news__cat">Recruit</span><span class="news__title">2028年度 新卒採用のエントリー受付を開始しました</span></li>
+          <li class="news__item"><time datetime="2026-08-28">2026.08.28</time><span class="news__cat">Info</span><span class="news__title">夏季休業期間のお知らせ</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 採用 -->
+    <section class="recruit-banner">
+      <div class="recruit-banner__media" aria-hidden="true"></div>
+      <div class="container recruit-banner__inner">
+        <p class="recruit-banner__en">Recruit</p>
+        <h2 class="recruit-banner__title"><span class="phrase">まちに残る仕事を、</span><span class="phrase">一緒に。</span></h2>
+        <p class="recruit-banner__text"><span class="phrase">施工管理・設計・設備エンジニアを</span><span class="phrase">募集しています。</span></p>
+        <a href="recruit.html" class="btn btn--ghost">採用情報を見る</a>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <h2 class="section-title">
+          <span class="section-title__en"><span class="section-title__num">07</span>Contact</span>
+          <span class="section-title__ja"><span class="phrase">建設のご相談・</span><span class="phrase">お問い合わせ</span></span>
+        </h2>
+        <div class="contact__body">
+          <p>計画の初期段階のご相談から、改修・増築のご依頼まで、お気軽にお問い合わせください。</p>
+          <div class="contact__ways">
+            <a href="tel:0300000000" class="contact__tel">
+              <span class="contact__label">お電話</span>
+              <span class="contact__num">03-0000-0000</span>
+              <span class="contact__time">平日 9:00〜17:30</span>
+            </a>
+            <a href="contact.html" class="btn btn--primary contact__btn">お問い合わせフォーム</a>
+          </div>
+          <p class="demo-note">※電話番号は架空のものです。フォームはデモのため送信されません。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__company">
+        <a href="#top" class="logo logo--light">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__text">
+            <span class="logo__ja">未来創造建設株式会社</span>
+            <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+          </span>
+        </a>
+        <p class="footer__info">〒100-0000<br><span class="phrase">東京都千代田区みらい町1-2-3</span> <span class="phrase">未来創造ビル</span><br>TEL 03-0000-0000（平日 9:00〜17:30）</p>
+      </div>
+
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer__nav">
+          <li><a href="#message">私たちについて</a></li>
+          <li><a href="#business">事業領域</a></li>
+          <li><a href="works.html">施工実績</a></li>
+          <li><a href="#technology">技術</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p class="demo-note">※掲載の企業情報・施工実績・人物・数値は、すべてデモ用の架空のものです。実在の企業・建物とは関係ありません。</p>
+      <p class="footer__copy"><small>&copy; 2026 MIRAI SOZO CONSTRUCTION（架空）. ※このサイトは自主制作のデモサイトです。</small></p>
+    </div>
+  </footer>
+
+  <!-- ページトップへ戻るボタン -->
+  <a href="#top" class="page-top" id="pageTop" aria-label="ページの先頭へ戻る">
+    <span aria-hidden="true"></span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

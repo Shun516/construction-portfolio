@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B9CFF2"/>
+      <stop offset="1" stop-color="#F2F6FC"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6E95D6"/>
+      <stop offset="1" stop-color="#2D5BA6"/>
+    </linearGradient>
+    <pattern id="mul" width="28" height="10" patternUnits="userSpaceOnUse">
+      <rect width="2" height="10" fill="#E6EEFB" opacity="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="600" fill="url(#sky)"/>
+  <!-- forest -->
+  <g fill="#6F8F7A">
+    <ellipse cx="80" cy="330" rx="110" ry="60"/><ellipse cx="220" cy="320" rx="90" ry="55"/>
+    <ellipse cx="700" cy="325" rx="110" ry="58"/><ellipse cx="850" cy="320" rx="100" ry="60"/>
+  </g>
+  <g fill="#557563">
+    <ellipse cx="150" cy="350" rx="120" ry="45"/><ellipse cx="780" cy="352" rx="130" ry="42"/>
+  </g>
+  <!-- museum -->
+  <path d="M90 300h720l-40 22H130z" fill="#FFFFFF"/>
+  <path d="M90 300h720" stroke="#C9D8EF" stroke-width="2"/>
+  <rect x="150" y="322" width="600" height="90" fill="#1F3E73"/>
+  <rect x="150" y="322" width="600" height="90" fill="url(#mul)"/>
+  <rect x="170" y="336" width="560" height="62" fill="#FFE3A8" opacity="0.22"/>
+  <g fill="#FFFFFF"><rect x="148" y="322" width="8" height="90"/><rect x="446" y="322" width="8" height="90"/><rect x="744" y="322" width="8" height="90"/></g>
+  <rect x="120" y="412" width="660" height="10" fill="#E6EEFB"/>
+  <!-- water with reflection -->
+  <rect y="422" width="900" height="178" fill="url(#water)"/>
+  <rect x="150" y="430" width="600" height="60" fill="#1F3E73" opacity="0.35"/>
+  <path d="M110 500h680" stroke="#fff" stroke-width="10" opacity="0.15"/>
+  <g stroke="#fff" stroke-width="2" opacity="0.4">
+    <path d="M90 520h150M320 540h220M600 516h140M200 570h120M520 580h200"/>
+  </g>
+</svg>

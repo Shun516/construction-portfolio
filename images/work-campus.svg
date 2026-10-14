@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A9C3EC"/>
+      <stop offset="1" stop-color="#F2F6FC"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#1F3E73"/>
+      <path d="M40 0H0V40" fill="none" stroke="#9DBDF3" stroke-width="1.5" opacity="0.6"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="600" fill="url(#sky)"/>
+  <!-- glass cube research lab -->
+  <rect x="460" y="150" width="320" height="370" fill="url(#grid)"/>
+  <rect x="460" y="150" width="320" height="370" fill="#9DBDF3" opacity="0.18"/>
+  <path d="M460 150l320 370" stroke="#fff" stroke-width="2" opacity="0.25"/>
+  <!-- concrete bar building cantilever -->
+  <rect x="100" y="260" width="420" height="110" fill="#E3E8EF"/>
+  <rect x="120" y="290" width="380" height="50" fill="#2D5BA6"/>
+  <g stroke="#E3E8EF" stroke-width="4"><path d="M195 290v50M270 290v50M345 290v50M420 290v50"/></g>
+  <rect x="150" y="370" width="40" height="150" fill="#C9D1DC"/>
+  <rect x="360" y="370" width="40" height="150" fill="#C9D1DC"/>
+  <!-- pilotis plaza -->
+  <rect y="520" width="900" height="80" fill="#DCE5F3"/>
+  <path d="M0 548h900" stroke="#C3D1E8" stroke-width="2"/>
+  <g fill="#14294D"><rect x="240" y="490" width="8" height="30"/><rect x="290" y="494" width="8" height="26"/></g>
+  <g fill="#5E8C5A"><circle cx="60" cy="470" r="50"/><circle cx="840" cy="490" r="34"/></g>
+</svg>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>施工実績 | 未来創造建設株式会社</title>
+  <meta name="description" content="架空の総合建設会社「未来創造建設株式会社」の施工実績一覧（デモサイト）。建物名・所在地などはすべて架空のものです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo" aria-label="未来創造建設株式会社 トップへ">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <span class="logo__ja">未来創造建設</span>
+          <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+        </span>
+      </a>
+
+      <button class="header__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="globalNav" aria-label="メインメニュー">
+        <div class="nav__head">
+          <span class="logo">
+            <span class="logo__mark" aria-hidden="true"></span>
+            <span class="logo__text">
+              <span class="logo__ja">未来創造建設</span>
+              <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+            </span>
+          </span>
+          <button type="button" class="nav__close" id="navClose" aria-label="メニューを閉じる">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#message" class="nav__link"><span class="nav__en" aria-hidden="true">Message</span><span class="nav__label">私たちについて</span></a></li>
+          <li class="nav__item"><a href="index.html#business" class="nav__link"><span class="nav__en" aria-hidden="true">Business</span><span class="nav__label">事業領域</span></a></li>
+          <li class="nav__item"><a href="works.html" class="nav__link is-current" aria-current="page"><span class="nav__en" aria-hidden="true">Works</span><span class="nav__label">施工実績</span></a></li>
+          <li class="nav__item"><a href="index.html#technology" class="nav__link"><span class="nav__en" aria-hidden="true">Technology</span><span class="nav__label">技術</span></a></li>
+          <li class="nav__item"><a href="company.html" class="nav__link"><span class="nav__en" aria-hidden="true">Company</span><span class="nav__label">会社概要</span></a></li>
+          <li class="nav__item"><a href="recruit.html" class="nav__link"><span class="nav__en" aria-hidden="true">Recruit</span><span class="nav__label">採用情報</span></a></li>
+        </ul>
+
+        <div class="nav__cta">
+          <a href="contact.html" class="btn btn--primary btn--block">お問い合わせ</a>
+          <p class="nav__info">受付時間　平日 9:00〜17:30</p>
+          <p class="demo-note">※デモ用の架空の企業情報です</p>
+        </div>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary header__contact">お問い合わせ</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ページ見出し -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <ol>
+            <li><a href="index.html">ホーム</a></li>
+            <li aria-current="page">施工実績</li>
+          </ol>
+        </nav>
+        <h1 class="section-title page-hero__title">
+          <span class="section-title__en">Works</span>
+          <span class="section-title__ja">施工実績</span>
+        </h1>
+        <p class="page-hero__lead">超高層ビルから美術館、病院、駅前再開発まで。これまでに手がけた建物の一部をご紹介します。</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <!-- カテゴリーで絞り込み -->
+        <div class="filter" role="group" aria-label="カテゴリーで絞り込む">
+          <button type="button" class="filter__btn" data-cat="all" aria-pressed="true">すべて</button>
+          <button type="button" class="filter__btn" data-cat="office" aria-pressed="false">超高層・オフィス</button>
+          <button type="button" class="filter__btn" data-cat="culture" aria-pressed="false">文化・公共</button>
+          <button type="button" class="filter__btn" data-cat="edu" aria-pressed="false">教育・医療</button>
+          <button type="button" class="filter__btn" data-cat="urban" aria-pressed="false">都市再開発</button>
+        </div>
+        <p class="filter__count" id="filterCount" aria-live="polite">9件の実績</p>
+
+        <ul class="works works--list">
+          <li class="works__item" data-cat="office">
+            <figure>
+              <div class="works__media"><img src="images/work-tower.svg" alt="ガラスのカーテンウォールに覆われた細長い超高層タワー" width="1200" height="800" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">超高層・オフィス</span><span>2025年竣工</span></p>
+                <h2 class="works__title">あおば中央タワー</h2>
+                <p class="works__spec">東京都 ／ 地上52階・地下4階 ／ 延床面積 約18万㎡</p>
+                <p class="works__text">オフィス・ホテル・商業が入る複合タワー。独自の制震ダンパーを全層に配置し、長周期地震動にも備えています。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="culture">
+            <figure>
+              <div class="works__media"><img src="images/work-museum.svg" alt="水盤に面した、白い大屋根の低層の美術館" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">文化・公共</span><span>2024年竣工</span></p>
+                <h2 class="works__title">湖畔の森美術館</h2>
+                <p class="works__spec">滋賀県 ／ 地上2階 ／ 延床面積 約9,800㎡</p>
+                <p class="works__text">長さ120mの薄い大屋根が水盤の上に浮かぶ美術館。柱を極限まで細くし、湖と森の景色を室内に取り込みました。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="culture">
+            <figure>
+              <div class="works__media"><img src="images/work-hall.svg" alt="波打つ屋根をもつ音楽ホールの外観" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">文化・公共</span><span>2023年竣工</span></p>
+                <h2 class="works__title">みなと音楽ホール</h2>
+                <p class="works__spec">神奈川県 ／ 地上4階 ／ 客席数 1,500席</p>
+                <p class="works__text">波をイメージした曲面屋根を、3次元の鉄骨で実現。音響シミュレーションを重ね、どの席でも響きが均一になるよう施工しました。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="office">
+            <figure>
+              <div class="works__media"><img src="images/work-office.svg" alt="白い縦のフィンが並ぶ、中層のオフィスビル" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">超高層・オフィス</span><span>2023年竣工</span></p>
+                <h2 class="works__title">ひばりヶ丘ビジネススクエア</h2>
+                <p class="works__spec">愛知県 ／ 地上18階 ／ 延床面積 約4.6万㎡</p>
+                <p class="works__text">中間階に屋外のスカイガーデンを設けたオフィスビル。縦フィンで日射を抑え、ZEB Ready認証（架空）を取得しています。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="edu">
+            <figure>
+              <div class="works__media"><img src="images/work-library.svg" alt="縦の木製ルーバーが並ぶ大学図書館" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">教育・医療</span><span>2024年竣工</span></p>
+                <h2 class="works__title">さくら学院大学 中央図書館</h2>
+                <p class="works__spec">京都府 ／ 地上5階 ／ 延床面積 約1.2万㎡</p>
+                <p class="works__text">地域産の杉を使った木製ルーバーが特徴。授業期間中の工事のため、騒音の大きい作業は休日に集中させました。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="edu">
+            <figure>
+              <div class="works__media"><img src="images/work-hospital.svg" alt="病棟の高層部と低層の外来棟からなる総合病院" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">教育・医療</span><span>2021年竣工</span></p>
+                <h2 class="works__title">あさひ総合医療センター</h2>
+                <p class="works__spec">福岡県 ／ 地上10階 ／ 病床数 480床</p>
+                <p class="works__text">免震構造の災害拠点病院。既存病院を運営しながらの建て替えで、患者さんの動線と静けさを最優先に工程を組みました。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="urban">
+            <figure>
+              <div class="works__media"><img src="images/work-station.svg" alt="駅前広場とペデストリアンデッキでつながる複合ビル群" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">都市再開発</span><span>2022年竣工</span></p>
+                <h2 class="works__title">ひかり台駅前地区 再開発</h2>
+                <p class="works__spec">大阪府 ／ 3棟・地上31階ほか ／ 区域面積 約2.4ha</p>
+                <p class="works__text">住宅・商業・公共施設の3棟をデッキで結んだ再開発。駅を利用しながらの工事で、仮設通路を段階的に切り替えました。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="culture">
+            <figure>
+              <div class="works__media"><img src="images/work-cityhall.svg" alt="段々に緑化された屋上をもつ市庁舎" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">文化・公共</span><span>2022年竣工</span></p>
+                <h2 class="works__title">みどり市 新庁舎</h2>
+                <p class="works__spec">埼玉県 ／ 地上7階 ／ 延床面積 約3.1万㎡</p>
+                <p class="works__text">段々状の屋上を緑化した市庁舎。中央の吹き抜けから自然光と風を取り込み、エネルギー消費を抑えています。</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="works__item" data-cat="edu">
+            <figure>
+              <div class="works__media"><img src="images/work-campus.svg" alt="ガラスの研究棟と、跳ね出したコンクリートの講義棟" width="900" height="600" loading="lazy" decoding="async"></div>
+              <figcaption class="works__body">
+                <p class="works__meta"><span class="works__cat">教育・医療</span><span>2020年竣工</span></p>
+                <h2 class="works__title">せいらん工科大学 研究棟</h2>
+                <p class="works__spec">宮城県 ／ 地上6階 ／ 延床面積 約1.5万㎡</p>
+                <p class="works__text">精密な実験装置を置くため、床の振動を厳しく管理した研究棟。講義棟は約20mの跳ね出しで広場を覆っています。</p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <p class="demo-note">※施工実績・建物名・所在地・認証などはすべてデモ用の架空のものです。画像はイメージイラストです。</p>
+      </div>
+    </section>
+
+    <!-- お問い合わせへの案内 -->
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <p class="cta-band__text"><span class="phrase">計画中の建物について、</span><span class="phrase">お気軽にご相談ください。</span></p>
+        <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__company">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__text">
+            <span class="logo__ja">未来創造建設株式会社</span>
+            <span class="logo__en">MIRAI SOZO CONSTRUCTION</span>
+          </span>
+        </a>
+        <p class="footer__info">〒100-0000<br><span class="phrase">東京都千代田区みらい町1-2-3</span> <span class="phrase">未来創造ビル</span><br>TEL 03-0000-0000（平日 9:00〜17:30）</p>
+      </div>
+
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer__nav">
+          <li><a href="index.html#message">私たちについて</a></li>
+          <li><a href="index.html#business">事業領域</a></li>
+          <li><a href="works.html" aria-current="page">施工実績</a></li>
+          <li><a href="index.html#technology">技術</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="index.html#news">お知らせ</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p class="demo-note">※掲載の企業情報・施工実績・人物・数値は、すべてデモ用の架空のものです。実在の企業・建物とは関係ありません。</p>
+      <p class="footer__copy"><small>&copy; 2026 MIRAI SOZO CONSTRUCTION（架空）. ※このサイトは自主制作のデモサイトです。</small></p>
+    </div>
+  </footer>
+
+  <a href="#top" class="page-top" id="pageTop" aria-label="ページの先頭へ戻る"><span aria-hidden="true"></span></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
